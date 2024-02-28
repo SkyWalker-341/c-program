@@ -1,0 +1,364 @@
+1.
+#include<stdio.h>
+int main()
+{
+    int age;
+    printf("enter your age ::");
+    scanf("%d",&age);
+    if(age>=18)
+    {	
+	printf("your are eligible for voting ::");
+     }
+     else
+	{ printf("your are not eligible for voting ::");
+	}
+	return 0;
+}
+
+2.
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter your number ::");
+    scanf("%d",&num);
+    if(num%2==0)
+    {	
+	printf(" this  number is even");
+     }
+     else
+	{ printf("this  number is odd");
+	}
+	return 0;
+}
+
+3.
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("enter your number ::");
+    scanf("%d",&num);
+    if(num>0)
+    {	
+	printf(" this  number is positive");
+     }
+    else if(num<0){
+        printf("this number is negative");
+    }
+     else
+	{ printf("this  number is zero");
+	}
+	return 0;
+}
+
+4.
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, sum, average;
+
+    printf("Enter the three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    sum = num1 + num2 + num3;
+    average = sum / 3;
+
+    printf("The sum is: %d\n", sum);
+    printf("The average is: %d\n", average);
+
+    if (sum >= 100 && sum <= 200) {
+        printf("Sum is in the allowed range\n");
+    } else {
+        printf("Sum has exceeded the range\n");
+    }
+
+    return 0;
+}
+	
+5.
+#include <stdio.h>
+
+int main() {
+    char vehicle;
+    int hours, amount;
+
+    printf("c for car\n, b for bus\n, s for scooter/motorcycle/c for cycle\n enter your vehicle ::");
+    scanf(" %c", &vehicle);
+
+    printf("Enter the number of hours: ");
+    scanf("%d", &hours);
+
+    switch (vehicle) {
+        case 'c':
+        case 'C':
+            amount = hours * 25;
+            break;
+        case 'b':
+        case 'B':
+            amount = hours * 50;
+            break;
+        case 's':
+        case 'S':
+            amount = hours * 10;
+            break;
+    }
+
+    printf("The parking charges are Rs. %d\n", amount);
+
+    return 0;
+}
+
+6.
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+    int salary;
+    char gender[10]; // Assuming gender can be "male" or "female"
+    
+    printf("Enter your salary: ");
+    scanf("%d", &salary);
+
+    printf("Enter your gender: ");
+    scanf("%s", gender);
+
+    if (strcmp(gender, "male") == 0 || strcmp(gender, "Male") == 0)
+    {
+        salary = salary * 5/100; 
+        printf("The your is salary is %d\n", salary);
+	if(salary<10000)
+		{ 
+            	salary = salary*2/100;
+ 		
+	   printf("Original Salary: Rs. %.2lf\n", salary);
+    	   printf("Bonus Percentage: %.2lf%%\n :: 12%");
+           printf(" bouns+Salary: Rs. %.2lf\n", Salary);
+		}
+    }
+    else if (strcmp(gender,"Female")==0||strcmp(gender,"female")==0)
+	{ 
+	   salary = salary*10/100;
+	   printf("The your is salary is %d\n", salary);
+ 	   if(salary<10000)
+		{ 
+            	salary = salary*2/100;
+ 		
+	   printf("Original Salary: Rs. %.2lf\n", salary);
+    	   printf("Bonus Percentage: %.2lf%%\n :: 12% bouns");
+           printf(" bouns+Salary: Rs. %.2lf\n", Salary);
+		}
+	}
+    
+      
+    return 0;
+}
+
+
+7.
+#include <stdio.h>
+
+int main() {   
+    int math, phy, chem, eng, total;  // Added semicolon at the end
+    float average;  // Corrected the type
+    printf("enter the maths mark : ");
+    scanf("%d", &math);
+    printf("enter the phy mark : ");
+    scanf("%d", &phy);
+    printf("enter the chem mark : ");
+    scanf("%d", &chem);
+    printf("enter the eng mark : ");
+    scanf("%d", &eng);
+    
+    total = phy + chem + eng + math;
+    average = (float)total / 4;  // Casting to float for accurate division
+    printf("the total mark is : %d\n", total);
+    printf("the average mark is : %f\n", average);
+
+    return 0;
+}
+
+
+9.
+#include <stdio.h>
+
+int main() {
+    int electricity_unit;
+    float unit;
+
+    // Prompt the user to enter electricity_unit
+    printf("Enter the electricity unit: ");
+    scanf("%d", &electricity_unit);
+
+    if (electricity_unit < 150) {
+        unit = electricity_unit * 3;
+        printf("The unit is: %f\n", unit);
+    } else if (electricity_unit > 150 && electricity_unit < 350) {
+        unit = 100 + (electricity_unit - 150) * 3.75;
+        printf("The electricity unit is: %f\n", unit);
+    } else if (electricity_unit > 350 && electricity_unit < 450) {
+        unit = 250 + (electricity_unit - 350) * 4;
+        printf("The electricity unit is: %f\n", unit);
+    } else if (electricity_unit > 450 && electricity_unit < 600) {
+        unit = 300 + (electricity_unit - 450) * 4.5;
+        printf("The electricity unit is: %f\n", unit);
+    }
+
+    return 0;
+}
+
+11.
+#include <stdio.h>
+
+int main() {
+    int day;
+    
+    printf("Enter the number of day: ");
+    scanf("%d", &day);
+
+    switch (day) {
+        case 1:  
+            printf("Monday\n");
+            break;
+        case 2: 
+            printf("Tuesday\n");
+            break;
+        case 3: 
+            printf("Wednesday\n");
+            break;
+        case 4: 
+            printf("Thursday\n");
+            break;
+        case 5:  
+            printf("Friday\n");
+            break;
+        case 6:
+            printf("Saturday\n");
+            break;
+        case 7:
+            printf("Sunday\n");
+            break;
+        default:
+            printf("Invalid number\n");
+    }
+
+    return 0;
+}
+
+
+
+13.
+#include<stdio.h>
+
+int main()
+{   
+    int num, i = 1, sum = 0, choice; 
+
+    printf("Enter your choice:\n1. while loop\n2. for loop\n3. do-while loop\n");
+    scanf("%d", &choice);
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num > 0) {
+        if (choice == 1) {
+            while (i <= num) {
+                sum += i;
+                i++;
+            }
+            printf("The sum of first %d natural numbers: %d", num, sum);
+        } 
+        else if (choice == 2) {
+            for (i = 1; i <= num; ++i) {
+                sum += i;
+            }
+            printf("The sum of first %d natural numbers: %d", num, sum);
+        } 
+        else if (choice == 3) {
+            do {
+                sum += i;
+                i++;
+            } while (i <= num);
+            printf("The sum of first %d natural numbers: %d", num, sum);
+        }
+        else {
+            printf("Invalid choice.");
+        }
+    } 
+    else {
+        printf("The number is not a positive integer.");
+    }
+
+    return 0;
+}
+
+
+14.
+#include<stdio.h>
+
+int main() {
+    int num, positiveCount = 0, negativeCount = 0, zeroCount = 0;
+
+    printf("Enter integers (enter 999 to stop):\n");
+
+    while (1) {
+        printf("Enter an integer: ");
+        scanf("%d", &num);
+
+        if (num == 999) {
+            break; // Exit the loop when 999 is encountered
+        }
+
+        if (num > 0) {
+            positiveCount++;
+        } else if (num < 0) {
+            negativeCount++;
+        } else {
+            zeroCount++;
+        }
+    }
+
+    printf("\nSummary:\n");
+    printf("Positive numbers entered: %d\n", positiveCount);
+    printf("Negative numbers entered: %d\n", negativeCount);
+    printf("Zeroes entered: %d\n", zeroCount);
+
+    return 0;
+}
+
+
+
+
+15.
+#include<stdio.h>
+#include <math.h>
+
+int main() {
+    int i = 1, num, result, choice;
+
+    printf("Choose operation:\n1. Square\n2. Cube\n");
+    scanf("%d", &choice);
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (choice == 1) {
+        do {
+            result = i * i;
+            printf("The square number is: %d\n", result);
+            i++;
+        } while (i <= num);
+    }
+    else if (choice == 2) {
+        do {
+            result = i * i * i;
+            printf("The cube number is: %d\n", result);
+            i++;
+        } while (i <= num);
+    } else {
+        printf("Invalid choice.\n");
+    }
+
+    return 0;
+}
